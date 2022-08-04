@@ -53,7 +53,7 @@ async def start(bot: lucifermoringstar_robot, update):
                     await bot.send_message(chat_id=update.from_user.id, text="""𝚂𝙾𝚁𝚁𝚈 𝚂𝙸𝚁, 𝚈𝙾𝚄 𝙰𝚁𝙴 𝙱𝙰𝙽𝙽𝙴𝙳 𝚃𝙾 𝚄𝚂𝙴 𝙼𝙴""", disable_web_page_preview=True)                  
                     return
             except UserNotParticipant:
-                mrk, file_id = update.text.split("-mo-tech-group-")
+                mrk, file_id = update.text.split("mmoviesofficial")
                 FORCES = ["https://telegra.ph/file/b2acb2586995d0e107760.jpg"]
                 invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
                 pr0fess0r_99 = [[ InlineKeyboardButton("🔰 𝙹𝙾𝙸𝙽 𝙼𝚈 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 🔰", url=invite_link.invite_link) ],
@@ -81,7 +81,7 @@ async def start(bot: lucifermoringstar_robot, update):
 
     if len(update.command) != 2:
         pr0fess0r_99 = [[ InlineKeyboardButton("× 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 ×", url=f"http://t.me/{temp.Bot_Username}?startgroup=true") ],
-                        [ InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃 💬", url=f"t.me/{SUPPORT}"), InlineKeyboardButton("𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="t.me/Mo_Tech_YT") ],
+                        [ InlineKeyboardButton("𝚂𝚄𝙿𝙿𝙾𝚁𝚃 💬", url=f"t.me/{SUPPORT}"), InlineKeyboardButton("𝚄𝙿𝙳𝙰𝚃𝙴𝚂 📢", url="t.me/mmmoviesofficial") ],
                         [ InlineKeyboardButton("ℹ️ 𝙷𝙴𝙻𝙿", callback_data="help"), InlineKeyboardButton("𝙰𝙱𝙾𝚄𝚃 🤠", callback_data="about") ]] 
         await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=START_MESSAGE.format(mention=update.from_user.mention, name=temp.Bot_Name, username=temp.Bot_Username), reply_markup=InlineKeyboardMarkup(pr0fess0r_99))
 
@@ -91,14 +91,14 @@ async def admin(bot: lucifermoringstar_robot, update):
 
 @lucifermoringstar_robot.on_message(filters.command(["about"]) & filters.private, group=3)
 async def about(bot: lucifermoringstar_robot, update):
-    pr0fess0r_99 = [[ InlineKeyboardButton("📦 𝚂𝙾𝚄𝚁𝙲𝙴 📦", url="https://github.com/PR0FESS0R-99/LuciferMoringstar-Robot") ],
+    pr0fess0r_99 = [[ InlineKeyboardButton("📦 𝚂𝙾𝚄𝚁𝙲𝙴 📦", url="https://t.me/mmmoviesofficial") ],
                     [ InlineKeyboardButton("𝙷𝙾𝙼𝙴", callback_data="start"), InlineKeyboardButton("𝙷𝙾𝚆 𝚃𝙾 𝚄𝚂𝙴", callback_data="usage"), InlineKeyboardButton("𝙲𝙻𝙾𝚂𝙴", callback_data="close") ]]                     
-    await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=ABOUT_MESSAGE.format(name = CREATOR_NAME, username = CREATOR_USERNAME, py3_version = temp.PY3_VERSION, pyro_version = temp.PYRO_VERSION, version = temp.BOT_VERSION, source = "https://github.com/PR0FESS0R-99/LuciferMoringstar-Robot"), reply_markup=InlineKeyboardMarkup(pr0fess0r_99))
+    await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=ABOUT_MESSAGE.format(name = CREATOR_NAME, username = CREATOR_USERNAME, py3_version = temp.PY3_VERSION, pyro_version = temp.PYRO_VERSION, version = temp.BOT_VERSION, source = "https://t.me/mmmoviesofficial"), reply_markup=InlineKeyboardMarkup(xovo_efx))
 
 @lucifermoringstar_robot.on_message(filters.command(["usage"]) & filters.private, group=4)
 async def usage(bot: lucifermoringstar_robot, update):
     pr0fess0r_99 = [[ InlineKeyboardButton("🗑️ 𝙳𝙴𝙻𝙴𝚃𝙴 🗑️", callback_data="close") ]]
-    await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=USAGE_MESSAGE.format(CREATOR_NAME, CREATOR_USERNAME), reply_markup=InlineKeyboardMarkup(pr0fess0r_99))
+    await bot.send_photo(photo=random.choice(PICS), chat_id=update.chat.id, caption=USAGE_MESSAGE.format(CREATOR_NAME, CREATOR_USERNAME), reply_markup=InlineKeyboardMarkup(xovo_efx))
 
 @lucifermoringstar_robot.on_message(filters.command(["broadcast"]) & filters.user(ADMINS) & filters.private, group=5)
 async def broadcast(bot: lucifermoringstar_robot, update):
